@@ -10,7 +10,6 @@ const baseUlr = 'https://fanvue-intervue.s3-eu-west-1.amazonaws.com/';
 
 function App() {
 
-    const [uploaded, setUploaded] = useState(false)
     const [images, setImages] = useState([])
 
     useEffect(() => {
@@ -41,7 +40,6 @@ function App() {
                 return res.text();
             })
             .then(data => {
-                setUploaded(true)
                 fetchImages();
             })
             .catch(error => console.log(error)
